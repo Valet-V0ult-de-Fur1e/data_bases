@@ -1,0 +1,2 @@
+SELECT CompanyName, TotalDue as Revenue, RANK() OVER (ORDER BY TotalDue DESC) AS RankByRevenue FROM SalesLT.SalesOrderHeader, SalesLT.Customer
+WHERE SalesLT.Customer.CustomerID = SalesLT.SalesOrderHeader.CustomerID
